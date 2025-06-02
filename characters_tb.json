@@ -1,0 +1,161 @@
+{
+    "washerwoman": {
+        "ability": "You start knowing that 1 of 2 players is a particular Townsfolk.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/8/85/Icon_washerwoman.png",
+        "reminders": ["townsfolk", "decoy"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "librarian": {
+        "ability": "You start knowing that 1 of 2 players is a particular Outsider.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_librarian.png",
+        "reminders": ["outsider", "decoy"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "investigator": {
+        "ability": "You start knowing that 1 of 2 players is a particular Minion.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png",
+        "reminders": ["minion", "decoy"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "chef": {
+        "ability": "You start knowing how many pairs of evil players there are.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_chef.png",
+        "reminders": [],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "empath": {
+        "ability": "Each night, you learn how many of your 2 alive neighbors are evil.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_empath.png",
+        "reminders": [],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "fortune_teller": {
+        "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
+        "reminders": ["decoy"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "undertaker": {
+        "ability": "Each night*, you learn which character died by execution today.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/0/05/Icon_undertaker.png",
+        "reminders": ["executed"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "monk": {
+        "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/7/7c/Icon_monk.png",
+        "reminders": ["protected"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "ravenkeeper": {
+        "ability": "If you die at night, you are woken to choose a player: you learn their character.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png",
+        "reminders": [],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "virgin": {
+        "ability": "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_virgin.png",
+        "reminders": ["no ability"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "slayer": {
+        "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_slayer.png",
+        "reminders": ["no ability"],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "solider": {
+        "ability": "You are safe from the Demon.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_soldier.png",
+        "reminders": [],
+        "type": "townsfolk",
+        "effects": []
+    },
+    "mayor": {
+        "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_mayor.png",
+        "reminders": [],
+        "type": "townsfolk",
+        "effects": []
+    },
+
+
+    "saint": {
+        "ability": "If you die by execution, your team loses.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png",
+        "reminders": [],
+        "type": "outsider",
+        "effects": []
+    },
+    "recluse": {
+        "ability": "You might register as evil & as a Minion or Demon, even if dead.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
+        "reminders": [],
+        "type": "outsider",
+        "effects": []
+    },
+    "drunk": {
+        "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png",
+        "reminders": ["is the drunk"],
+        "type": "outsider",
+        "effects": ["#not_in_bag", "+1townsfolk"]
+    },
+    "butler": {
+        "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_butler.png",
+        "reminders": ["master"],
+        "type": "outsider",
+        "effects": []
+    },
+
+
+    "poisoner": {
+        "ability": "Each night, choose a player: they are poisoned tonight and tomorrow day.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_poisoner.png",
+        "reminders": ["poisoned"],
+        "type": "minion",
+        "effects": []
+    },
+    "spy": {
+        "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_spy.png",
+        "reminders": [],
+        "type": "minion",
+        "effects": []
+    },
+    "scarlet_woman": {
+        "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don't count.)",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_scarletwoman.png",
+        "reminders": ["demon"],
+        "type": "minion",
+        "effects": []
+    },
+    "baron": {
+        "ability": "There are extra Outsiders in play. [+2 Outsiders]",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png",
+        "reminders": [],
+        "type": "minion",
+        "effects": ["+2outsider"]
+    },
+
+    "imp": {
+        "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png",
+        "reminders": ["dead"],
+        "type": "demon",
+        "effects": []
+    }
+}
