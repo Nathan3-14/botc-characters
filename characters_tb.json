@@ -111,7 +111,7 @@
         "icon_url": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png",
         "reminders": ["is the drunk"],
         "character_type": "outsider",
-        "effects": ["#not_in_bag", "+1townsfolk"]
+        "effects": ["not_in_bag", "+1townsfolk"]
     },
     "butler": {
         "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too",
