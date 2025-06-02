@@ -1,25 +1,31 @@
 from typing import List
-from rich.console import Console
+from botc import (
+    console,
+    counts, Character,
+    load_character,
+    character_colours, colour_townsfolk, colour_outsider, colour_minion, colour_demon
+)
 
-console = Console()
-
-counts = {
-    5: {"townsfolk": 3, "outsider": 0, "minion": 1, "demon": 1},
-    6: {"townsfolk": 3, "outsider": 1, "minion": 1, "demon": 1},
-    7: {"townsfolk": 5, "outsider": 0, "minion": 1, "demon": 1},
-    8: {"townsfolk": 5, "outsider": 1, "minion": 1, "demon": 1},
-    9: {"townsfolk": 5, "outsider": 2, "minion": 1, "demon": 1},
-    10: {"townsfolk": 7, "outsider": 0, "minion": 2, "demon": 1},
-    11: {"townsfolk": 7, "outsider": 1, "minion": 2, "demon": 1},
-    12: {"townsfolk": 7, "outsider": 2, "minion": 2, "demon": 1},
-    13: {"townsfolk": 9, "outsider": 0, "minion": 3, "demon": 1},
-    14: {"townsfolk": 9, "outsider": 1, "minion": 3, "demon": 1},
-    15: {"townsfolk": 9, "outsider": 2, "minion": 3, "demon": 1},
-}
 
 player_count = 9
-chosen_characters: List[str] = []
+chosen_characters: List[Character] = [load_character("baron", {
+        "ability": "There are extra Outsiders in play. [+2 Outsiders]",
+        "icon_url": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png",
+        "reminders": [],
+        "character_type": "minion",
+        "effects": ["+2outsider"]
+    })
+]
 character_path = "./characters_tb.json"
 
 while True:
-    console.print(f"Current Characters: ")
+    console.print(f"Current Characters: {", ".join([f"[{character_colours[character.character_type]}]{" ".join([part.capitalize() for part in character.name.split(" ")])}[/{character_colours[character.character_type]}]" for character in chosen_characters])}")
+    console.print(f"Required Counts:")
+    console.print(f"\t[{colour_townsfolk}]Townsfolk: {counts[player_count]["townsfolk"]}[/{colour_townsfolk}]")
+    console.print(f"\t[{colour_outsider}]Outsider: {counts[player_count]["outsider"]}[/{colour_outsider}]")
+    console.print(f"\t[{colour_minion}]Minion: {counts[player_count]["minion"]}[/{colour_minion}]")
+    console.print(f"\t[{colour_demon}]Demon: 1[/{colour_demon}]")
+    action = input("")
+    match action:
+        case "q" | "quit" | "exit":
+            break
