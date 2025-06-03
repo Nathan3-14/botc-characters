@@ -1,0 +1,96 @@
+{
+    "washerwoman": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "librarian": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "investigator": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "chef": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "empath": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "fortune_teller": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "undertaker": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "monk": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "ravenkeeper": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "virgin": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "slayer": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "solider": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+    "mayor": {
+        "character_type": "townsfolk",
+        "effects": []
+    },
+
+
+    "saint": {
+        "character_type": "outsider",
+        "effects": []
+    },
+    "recluse": {
+        "character_type": "outsider",
+        "effects": []
+    },
+    "drunk": {
+        "character_type": "outsider",
+        "effects": ["not_in_bag", "+1townsfolk"]
+    },
+    "butler": {
+        "character_type": "outsider",
+        "effects": []
+    },
+
+
+    "poisoner": {
+        "character_type": "minion",
+        "effects": []
+    },
+    "spy": {
+        "character_type": "minion",
+        "effects": []
+    },
+    "scarlet_woman": {
+        "character_type": "minion",
+        "effects": []
+    },
+    "baron": {
+        "character_type": "minion",
+        "effects": ["+2outsider"]
+    },
+
+
+    "imp": {
+        "character_type": "demon",
+        "effects": []
+    }
+}

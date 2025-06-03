@@ -38,3 +38,8 @@ class Character:
     character_type: str
     effects: List[str]
     
+@dataclass
+class CharacterReduced:
+    name: str
+    character_type: str
+    effects: List[str]

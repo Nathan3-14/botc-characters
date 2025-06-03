@@ -2,17 +2,15 @@ import re
 from typing import List
 from botc import (
     console,
-    counts, Character,
+    counts, CharacterReduced,
     load_character,
     character_colours, colour_townsfolk, colour_outsider, colour_minion, colour_demon
 )
+from botc.funcs import load_character_reduced
 
 
 player_count = 9
-chosen_characters: List[Character] = [load_character("baron", {
-        "ability": "There are extra Outsiders in play. [+2 Outsiders]",
-        "icon_url": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png",
-        "reminders": [],
+chosen_characters: List[CharacterReduced] = [load_character_reduced("baron", {
         "character_type": "minion",
         "effects": ["+2outsider"]
     })
@@ -25,6 +23,7 @@ while True:
     count_minion = counts[player_count]["minion"]
     count_demon = counts[player_count]["demon"]
     
+    #* Add Effects *#
     for character in chosen_characters:
         if len(character.effects) == 0:
             continue
@@ -81,6 +80,8 @@ while True:
     match action:
         case "q" | "quit" | "exit":
             break
+        case "help" | "h":
+            console.print("\n*****\nHelp here!\n*****\n")
 
 
 #TODO Load from file TODO#
