@@ -1,21 +1,26 @@
+import json
 import re
 from typing import List
 from botc import (
     console,
     counts, CharacterReduced,
-    load_character,
+    load_character, load_character_reduced,
     character_colours, colour_townsfolk, colour_outsider, colour_minion, colour_demon
 )
-from botc.funcs import load_character_reduced
+from help import (
+    command_quit
+)
 
 
 player_count = 9
-chosen_characters: List[CharacterReduced] = [load_character_reduced("baron", {
-        "character_type": "minion",
-        "effects": ["+2outsider"]
-    })
-]
-character_path = "./characters_tb.json"
+# chosen_characters: List[CharacterReduced] = [load_character_reduced("baron", {
+#         "character_type": "minion",
+#         "effects": ["+2outsider"]
+#     })
+# ]
+chosen_characters: List[CharacterReduced] = []
+character_path = "./characters_tb_reduced.json"
+character_data = json.load(open(character_path, "r"))
 
 while True:
     count_townsfolk = counts[player_count]["townsfolk"]
@@ -77,11 +82,17 @@ while True:
     console.print(f"\t[{colour_minion}]Minion: {count_minion}[/{colour_minion}]")
     console.print(f"\t[{colour_demon}]Demon: {count_demon}[/{colour_demon}]")
     action = input("")
-    match action:
+    action_args = action.split(" ")
+    match action_args[0]:
         case "q" | "quit" | "exit":
             break
         case "help" | "h":
-            console.print("\n*****\nHelp here!\n*****\n")
+            ...
+        case "add":
+            chosen_characters.append(load_character_reduced(
+                name=action_args[1],
+                character_dict=character_data[1]
+            ))
 
 
 #TODO Load from file TODO#
