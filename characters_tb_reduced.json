@@ -85,7 +85,7 @@
     },
     "baron": {
         "character_type": "minion",
-        "effects": ["+2outsider"]
+        "effects": ["+2outsider", "-2townsfolk"]
     },
 
 

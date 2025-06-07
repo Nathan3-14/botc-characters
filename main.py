@@ -60,16 +60,16 @@ while True:
                 match effect_temp[2:]:
                     case "townsfolk":
                         count_townsfolk += (add_bool * 2 - 1) * int(effect_temp[1])
-                        count_outsider -= (add_bool * 2 - 1) * int(effect_temp[1])
+                        # count_outsider -= (add_bool * 2 - 1) * int(effect_temp[1])
                     case "outsider":
                         count_outsider += (add_bool * 2 - 1) * int(effect_temp[1])
-                        count_townsfolk -= (add_bool * 2 - 1) * int(effect_temp[1])
+                        # count_townsfolk -= (add_bool * 2 - 1) * int(effect_temp[1])
                     case "minion":
                         count_minion += (add_bool * 2 - 1) * int(effect_temp[1])
-                        count_townsfolk -= (add_bool * 2 - 1) * int(effect_temp[1])
+                        # count_townsfolk -= (add_bool * 2 - 1) * int(effect_temp[1])
                     case "demon":
                         count_demon += (add_bool * 2 - 1) * int(effect_temp[1])
-                        count_outsider -= (add_bool * 2 - 1) * int(effect_temp[1])
+                        # count_outsider -= (add_bool * 2 - 1) * int(effect_temp[1])
             else:
                 match effect_temp:
                     case "not_in_bag":
@@ -91,7 +91,7 @@ while True:
         case "add":
             chosen_characters.append(load_character_reduced(
                 name=action_args[1],
-                character_dict=character_data[1]
+                character_dict=character_data[action_args[1]]
             ))
 
 
